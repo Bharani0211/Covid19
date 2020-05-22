@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:covid/ModelClasses/CovidModel.dart';
 import 'package:http/http.dart';
 

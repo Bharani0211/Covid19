@@ -1,8 +1,10 @@
-import 'package:covid/pages/about.dart';
+import 'package:covid/pages/GlobalList.dart';
+import 'package:covid/pages/global.dart';
 import 'package:covid/pages/all.dart';
 import 'package:covid/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter/scheduler.dart';
 
 void main() => runApp(MaterialApp(home: MyApp()));
 
@@ -16,7 +18,8 @@ class _MyAppState extends State<MyApp> {
 
   final HomePage _hp = HomePage();
   final AllPages _all = AllPages();
-  final AboutPage _about = AboutPage();
+  final GlobalPage _gl = GlobalPage();
+  final GlobalList _glist = GlobalList();
 
   Widget _showPage = new HomePage();
 
@@ -29,7 +32,10 @@ class _MyAppState extends State<MyApp> {
         return _all;
         break;
       case 2:
-        return _about;
+        return _gl;
+        break;
+      case 3:
+        return _glist;
         break;
       default:
         new Container(
@@ -46,17 +52,18 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Covid19 IN"),
+          title: Text("Covid19"),
           backgroundColor: Color(0xff455a64),
         ),
         bottomNavigationBar: CurvedNavigationBar(
           key: _bottomNavigationKey,
           index: pageIndex,
-          height: 50.0,
+          height: 60.0,
           items: <Widget>[
-            Icon(Icons.golf_course, size: 30, color: Colors.white,),
+            Icon(Icons.find_in_page, size: 30, color: Colors.white,),
             Icon(Icons.list, size: 30, color: Colors.white,),
             Icon(Icons.compare_arrows, size: 30, color: Colors.white,),
+            Icon(Icons.view_list, size: 30, color: Colors.white,),
           ],
           color: Color(0xff455a64),
           buttonBackgroundColor: Color(0xff455a64),

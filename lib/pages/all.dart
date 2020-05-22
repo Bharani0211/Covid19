@@ -3,7 +3,6 @@ import 'package:covid/network/network.dart';
 import 'package:flutter/material.dart';
 import 'package:getflutter/components/loader/gf_loader.dart';
 import 'package:getflutter/types/gf_loader_type.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class AllPages extends StatefulWidget {
   @override
