@@ -18,6 +18,7 @@ class _GlobalListState extends State<GlobalList> {
     super.initState();
     global = GNetwork().getGlobalDetails();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,13 +26,13 @@ class _GlobalListState extends State<GlobalList> {
         body: Container(
           child: FutureBuilder<GlobalModel>(
             future: global,
-            builder: (BuildContext context,
-                AsyncSnapshot<GlobalModel> snapshot) {
+            builder:
+                (BuildContext context, AsyncSnapshot<GlobalModel> snapshot) {
               if (snapshot.hasData) {
                 return Scaffold(
                     backgroundColor: Colors.black,
                     body: Padding(
-                      padding: const EdgeInsets.only(top:5.0,bottom: 5.0),
+                      padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
                       child: ListView.builder(
                           itemCount: snapshot.data.countries.length,
                           itemBuilder: (BuildContext context, int index) {
@@ -49,7 +50,8 @@ class _GlobalListState extends State<GlobalList> {
                                   subtitle: Padding(
                                     padding: const EdgeInsets.only(top: 10.0),
                                     child: Row(
-                                      mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: <Widget>[
                                         Padding(
                                           padding: EdgeInsets.only(top: 8.0),
@@ -61,13 +63,15 @@ class _GlobalListState extends State<GlobalList> {
                                                     color: Colors.white70),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsets.only(top:5.0),
+                                                padding: const EdgeInsets.only(
+                                                    top: 5.0),
                                                 child: Column(
                                                   children: <Widget>[
                                                     Text(
                                                       "${snapshot.data.countries[index].totalConfirmed}",
                                                       style: TextStyle(
-                                                          color: Colors.white70),
+                                                          color:
+                                                              Colors.white70),
                                                     ),
                                                   ],
                                                 ),
@@ -75,7 +79,8 @@ class _GlobalListState extends State<GlobalList> {
                                             ],
                                           ),
                                         ),
-                                        Padding(padding: EdgeInsets.only(top:8.0),
+                                        Padding(
+                                          padding: EdgeInsets.only(top: 8.0),
                                           child: Column(
                                             children: <Widget>[
                                               Text(
@@ -84,13 +89,15 @@ class _GlobalListState extends State<GlobalList> {
                                                     color: Colors.white70),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsets.only(top:5.0),
+                                                padding: const EdgeInsets.only(
+                                                    top: 5.0),
                                                 child: Column(
                                                   children: <Widget>[
                                                     Text(
-                                                      "${snapshot.data.countries[index].totalConfirmed-(snapshot.data.countries[index].totalDeaths+snapshot.data.countries[index].totalRecovered)}",
+                                                      "${snapshot.data.countries[index].totalConfirmed - (snapshot.data.countries[index].totalDeaths + snapshot.data.countries[index].totalRecovered)}",
                                                       style: TextStyle(
-                                                          color: Colors.white70),
+                                                          color:
+                                                              Colors.white70),
                                                     ),
                                                   ],
                                                 ),
@@ -108,13 +115,15 @@ class _GlobalListState extends State<GlobalList> {
                                                     color: Colors.white70),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsets.only(top:5.0),
+                                                padding: const EdgeInsets.only(
+                                                    top: 5.0),
                                                 child: Column(
                                                   children: <Widget>[
                                                     Text(
                                                       "${snapshot.data.countries[index].totalRecovered}",
                                                       style: TextStyle(
-                                                          color: Colors.white70),
+                                                          color:
+                                                              Colors.white70),
                                                     ),
                                                   ],
                                                 ),
@@ -132,13 +141,15 @@ class _GlobalListState extends State<GlobalList> {
                                                     color: Colors.white70),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsets.only(top:5.0),
+                                                padding: const EdgeInsets.only(
+                                                    top: 5.0),
                                                 child: Column(
                                                   children: <Widget>[
                                                     Text(
                                                       "${snapshot.data.countries[index].totalConfirmed}",
                                                       style: TextStyle(
-                                                          color: Colors.white70),
+                                                          color:
+                                                              Colors.white70),
                                                     ),
                                                   ],
                                                 ),
@@ -146,7 +157,8 @@ class _GlobalListState extends State<GlobalList> {
                                             ],
                                           ),
                                         ),
-                                        Padding(padding: EdgeInsets.only(top:8.0),
+                                        Padding(
+                                          padding: EdgeInsets.only(top: 8.0),
                                           child: Column(
                                             children: <Widget>[
                                               Text(
@@ -155,13 +167,15 @@ class _GlobalListState extends State<GlobalList> {
                                                     color: Colors.white70),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsets.only(top:5.0),
+                                                padding: const EdgeInsets.only(
+                                                    top: 5.0),
                                                 child: Column(
                                                   children: <Widget>[
                                                     Text(
                                                       "${snapshot.data.countries[index].totalRecovered}",
                                                       style: TextStyle(
-                                                          color: Colors.white70),
+                                                          color:
+                                                              Colors.white70),
                                                     ),
                                                   ],
                                                 ),
@@ -179,13 +193,15 @@ class _GlobalListState extends State<GlobalList> {
                                                     color: Colors.white70),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsets.only(top:5.0),
+                                                padding: const EdgeInsets.only(
+                                                    top: 5.0),
                                                 child: Column(
                                                   children: <Widget>[
                                                     Text(
                                                       "${snapshot.data.countries[index].totalDeaths}",
                                                       style: TextStyle(
-                                                          color: Colors.white70),
+                                                          color:
+                                                              Colors.white70),
                                                     ),
                                                   ],
                                                 ),

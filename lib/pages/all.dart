@@ -48,7 +48,8 @@ class _AllPagesState extends State<AllPages> {
                                 subtitle: Padding(
                                   padding: const EdgeInsets.only(top: 10.0),
                                   child: Row(
-                                    mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       Padding(
                                         padding: EdgeInsets.only(top: 8.0),
@@ -60,7 +61,8 @@ class _AllPagesState extends State<AllPages> {
                                                   color: Colors.white70),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsets.only(top:5.0),
+                                              padding: const EdgeInsets.only(
+                                                  top: 5.0),
                                               child: Column(
                                                 children: <Widget>[
                                                   Text(
@@ -74,8 +76,9 @@ class _AllPagesState extends State<AllPages> {
                                           ],
                                         ),
                                       ),
-                                     Padding(padding: EdgeInsets.only(top:8.0),
-                                     child: Column(
+                                      Padding(
+                                        padding: EdgeInsets.only(top: 8.0),
+                                        child: Column(
                                           children: <Widget>[
                                             Text(
                                               "Active",
@@ -83,11 +86,12 @@ class _AllPagesState extends State<AllPages> {
                                                   color: Colors.white70),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsets.only(top:5.0),
+                                              padding: const EdgeInsets.only(
+                                                  top: 5.0),
                                               child: Column(
                                                 children: <Widget>[
                                                   Text(
-                                                    "${snapshot.data.data.regional[index].totalConfirmed-(snapshot.data.data.regional[index].discharged+snapshot.data.data.regional[index].deaths)}",
+                                                    "${snapshot.data.data.regional[index].totalConfirmed - (snapshot.data.data.regional[index].discharged + snapshot.data.data.regional[index].deaths)}",
                                                     style: TextStyle(
                                                         color: Colors.white70),
                                                   ),
@@ -96,8 +100,8 @@ class _AllPagesState extends State<AllPages> {
                                             ),
                                           ],
                                         ),
-                                     ),
-                                     Padding(
+                                      ),
+                                      Padding(
                                         padding: EdgeInsets.only(top: 8.0),
                                         child: Column(
                                           children: <Widget>[
@@ -107,7 +111,8 @@ class _AllPagesState extends State<AllPages> {
                                                   color: Colors.white70),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsets.only(top:5.0),
+                                              padding: const EdgeInsets.only(
+                                                  top: 5.0),
                                               child: Column(
                                                 children: <Widget>[
                                                   Text(
@@ -131,7 +136,8 @@ class _AllPagesState extends State<AllPages> {
                                                   color: Colors.white70),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsets.only(top:5.0),
+                                              padding: const EdgeInsets.only(
+                                                  top: 5.0),
                                               child: Column(
                                                 children: <Widget>[
                                                   Text(
@@ -145,8 +151,9 @@ class _AllPagesState extends State<AllPages> {
                                           ],
                                         ),
                                       ),
-                                     Padding(padding: EdgeInsets.only(top:8.0),
-                                     child: Column(
+                                      Padding(
+                                        padding: EdgeInsets.only(top: 8.0),
+                                        child: Column(
                                           children: <Widget>[
                                             Text(
                                               "Discharged",
@@ -154,7 +161,8 @@ class _AllPagesState extends State<AllPages> {
                                                   color: Colors.white70),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsets.only(top:5.0),
+                                              padding: const EdgeInsets.only(
+                                                  top: 5.0),
                                               child: Column(
                                                 children: <Widget>[
                                                   Text(
@@ -167,8 +175,8 @@ class _AllPagesState extends State<AllPages> {
                                             ),
                                           ],
                                         ),
-                                     ),
-                                     Padding(
+                                      ),
+                                      Padding(
                                         padding: EdgeInsets.only(top: 8.0),
                                         child: Column(
                                           children: <Widget>[
@@ -178,7 +186,8 @@ class _AllPagesState extends State<AllPages> {
                                                   color: Colors.white70),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsets.only(top:5.0),
+                                              padding: const EdgeInsets.only(
+                                                  top: 5.0),
                                               child: Column(
                                                 children: <Widget>[
                                                   Text(

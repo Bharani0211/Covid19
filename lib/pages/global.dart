@@ -12,7 +12,6 @@ class GlobalPage extends StatefulWidget {
 }
 
 class _GlobalPageState extends State<GlobalPage> {
-
   Future<GlobalModel> globalObject;
 
   @override
@@ -29,8 +28,8 @@ class _GlobalPageState extends State<GlobalPage> {
         body: Container(
           child: FutureBuilder<GlobalModel>(
             future: globalObject,
-            builder: (BuildContext context,
-                AsyncSnapshot<GlobalModel> snapshot) {
+            builder:
+                (BuildContext context, AsyncSnapshot<GlobalModel> snapshot) {
               if (snapshot.hasData) {
                 return Padding(
                   padding: EdgeInsets.only(top: 8.0, left: 8.0),
@@ -75,26 +74,26 @@ class _GlobalPageState extends State<GlobalPage> {
                                                             fontSize: 20,
                                                             color: Colors.white,
                                                             fontWeight:
-                                                            FontWeight
-                                                                .w600))),
+                                                                FontWeight
+                                                                    .w600))),
                                               ),
                                             ),
                                             Column(
                                               children: <Widget>[
                                                 Padding(
                                                   padding:
-                                                  const EdgeInsets.only(
-                                                      top: 8.0, left: 25),
+                                                      const EdgeInsets.only(
+                                                          top: 8.0, left: 25),
                                                   child: Text(
                                                       "${snapshot.data.global.totalConfirmed}",
                                                       style: GoogleFonts.openSans(
                                                           textStyle: TextStyle(
                                                               fontSize: 30,
                                                               color:
-                                                              Colors.white,
+                                                                  Colors.white,
                                                               fontWeight:
-                                                              FontWeight
-                                                                  .w800))),
+                                                                  FontWeight
+                                                                      .w800))),
                                                 )
                                               ],
                                             )
@@ -133,18 +132,18 @@ class _GlobalPageState extends State<GlobalPage> {
                                               children: <Widget>[
                                                 Padding(
                                                   padding:
-                                                  const EdgeInsets.only(
-                                                      top: 8.0, left: 25),
+                                                      const EdgeInsets.only(
+                                                          top: 8.0, left: 25),
                                                   child: Text(
                                                       "${snapshot.data.global.totalConfirmed - (snapshot.data.global.totalDeaths + snapshot.data.global.totalRecovered)}",
                                                       style: GoogleFonts.openSans(
                                                           textStyle: TextStyle(
                                                               fontSize: 30,
                                                               color:
-                                                              Colors.white,
+                                                                  Colors.white,
                                                               fontWeight:
-                                                              FontWeight
-                                                                  .w800))),
+                                                                  FontWeight
+                                                                      .w800))),
                                                 )
                                               ],
                                             )
@@ -184,7 +183,7 @@ class _GlobalPageState extends State<GlobalPage> {
                                                         fontSize: 20,
                                                         color: Colors.white,
                                                         fontWeight:
-                                                        FontWeight.w600))),
+                                                            FontWeight.w600))),
                                           ),
                                           Column(
                                             children: <Widget>[
@@ -198,8 +197,8 @@ class _GlobalPageState extends State<GlobalPage> {
                                                             fontSize: 30,
                                                             color: Colors.white,
                                                             fontWeight:
-                                                            FontWeight
-                                                                .w800))),
+                                                                FontWeight
+                                                                    .w800))),
                                               )
                                             ],
                                           )
@@ -225,15 +224,14 @@ class _GlobalPageState extends State<GlobalPage> {
                                           Padding(
                                             padding: const EdgeInsets.only(
                                                 top: 50.0, left: 30),
-                                            child: Text(
-                                                "Deaths",
+                                            child: Text("Deaths",
                                                 textAlign: TextAlign.center,
                                                 style: GoogleFonts.openSans(
                                                     textStyle: TextStyle(
                                                         fontSize: 20,
                                                         color: Colors.white,
                                                         fontWeight:
-                                                        FontWeight.w600))),
+                                                            FontWeight.w600))),
                                           ),
                                           Column(
                                             children: <Widget>[
@@ -247,8 +245,8 @@ class _GlobalPageState extends State<GlobalPage> {
                                                             fontSize: 30,
                                                             color: Colors.white,
                                                             fontWeight:
-                                                            FontWeight
-                                                                .w800))),
+                                                                FontWeight
+                                                                    .w800))),
                                               )
                                             ],
                                           )
@@ -286,7 +284,7 @@ class _GlobalPageState extends State<GlobalPage> {
                                                         fontSize: 20,
                                                         color: Colors.white,
                                                         fontWeight:
-                                                        FontWeight.w600))),
+                                                            FontWeight.w600))),
                                           ),
                                           Column(
                                             children: <Widget>[
@@ -300,8 +298,8 @@ class _GlobalPageState extends State<GlobalPage> {
                                                             fontSize: 30,
                                                             color: Colors.white,
                                                             fontWeight:
-                                                            FontWeight
-                                                                .w800))),
+                                                                FontWeight
+                                                                    .w800))),
                                               )
                                             ],
                                           )
@@ -334,7 +332,7 @@ class _GlobalPageState extends State<GlobalPage> {
                                                         fontSize: 20,
                                                         color: Colors.white,
                                                         fontWeight:
-                                                        FontWeight.w600))),
+                                                            FontWeight.w600))),
                                           ),
                                           Column(
                                             children: <Widget>[
@@ -348,8 +346,8 @@ class _GlobalPageState extends State<GlobalPage> {
                                                             fontSize: 30,
                                                             color: Colors.white,
                                                             fontWeight:
-                                                            FontWeight
-                                                                .w800))),
+                                                                FontWeight
+                                                                    .w800))),
                                               )
                                             ],
                                           )
