@@ -1,6 +1,7 @@
 import 'package:covid/ModelClasses/CovidModel.dart';
 import 'package:covid/network/network.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:getflutter/components/loader/gf_loader.dart';
 import 'package:getflutter/getflutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,6 +23,10 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+
     return Scaffold(
         backgroundColor: Color(0xff000000),
         body: Container(
@@ -368,7 +373,7 @@ class _HomePageState extends State<HomePage> {
                             Column(
                               children: <Widget>[
                                 Text(
-                                    'Last refreshed on: ${snapshot.data.lastRefreshed}',
+                                    'Last refreshed on: ${snapshot.data.lastRefreshed.substring(0,10)}, ${snapshot.data.lastRefreshed.substring(11,16)}',
                                     style: GoogleFonts.openSans(
                                         textStyle: TextStyle(
                                             fontSize: 10,
@@ -386,7 +391,7 @@ class _HomePageState extends State<HomePage> {
                             Column(
                               children: <Widget>[
                                 Text(
-                                    'Last origin updated on: ${snapshot.data.lastOriginUpdate}',
+                                    'Last origin updated on: ${snapshot.data.lastOriginUpdate.substring(0,10)}, ${snapshot.data.lastOriginUpdate.substring(11,16)}',
                                     style: GoogleFonts.openSans(
                                         textStyle: TextStyle(
                                             fontSize: 10,

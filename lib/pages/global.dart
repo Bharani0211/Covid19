@@ -2,6 +2,7 @@ import 'package:covid/ModelClasses/GlobalModelClass.dart';
 import 'package:covid/network/global_network.dart';
 import 'package:flutter/material.dart';
 import 'package:covid/network/global_network.dart';
+import 'package:flutter/services.dart';
 import 'package:getflutter/components/loader/gf_loader.dart';
 import 'package:getflutter/types/gf_loader_type.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -23,6 +24,11 @@ class _GlobalPageState extends State<GlobalPage> {
 
   @override
   Widget build(BuildContext context) {
+
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
+
     return Scaffold(
         backgroundColor: Color(0xff000000),
         body: Container(
@@ -368,7 +374,7 @@ class _GlobalPageState extends State<GlobalPage> {
                             Column(
                               children: <Widget>[
                                 Text(
-                                    'Last origin updated on: ${snapshot.data.date}',
+                                    'Last origin updated on: ${snapshot.data.date.substring(0,10)}, ${snapshot.data.date.substring(11,16)}',
                                     style: GoogleFonts.openSans(
                                         textStyle: TextStyle(
                                             fontSize: 10,

@@ -1,6 +1,7 @@
 import 'package:covid/ModelClasses/GlobalModelClass.dart';
 import 'package:covid/network/global_network.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:getflutter/components/loader/gf_loader.dart';
 import 'package:getflutter/types/gf_loader_type.dart';
 
@@ -21,6 +22,9 @@ class _GlobalListState extends State<GlobalList> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
     return Scaffold(
         backgroundColor: Color(0xff000000),
         body: Container(
@@ -84,6 +88,32 @@ class _GlobalListState extends State<GlobalList> {
                                           child: Column(
                                             children: <Widget>[
                                               Text(
+                                                "Confirm",
+                                                style: TextStyle(
+                                                    color: Colors.white70),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsets.only(
+                                                    top: 5.0),
+                                                child: Column(
+                                                  children: <Widget>[
+                                                    Text(
+                                                      "${snapshot.data.countries[index].totalConfirmed}",
+                                                      style: TextStyle(
+                                                          color:
+                                                              Colors.white70),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(top: 8.0),
+                                          child: Column(
+                                            children: <Widget>[
+                                              Text(
                                                 "Active",
                                                 style: TextStyle(
                                                     color: Colors.white70),
@@ -121,32 +151,6 @@ class _GlobalListState extends State<GlobalList> {
                                                   children: <Widget>[
                                                     Text(
                                                       "${snapshot.data.countries[index].totalRecovered}",
-                                                      style: TextStyle(
-                                                          color:
-                                                              Colors.white70),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(top: 8.0),
-                                          child: Column(
-                                            children: <Widget>[
-                                              Text(
-                                                "Confirm",
-                                                style: TextStyle(
-                                                    color: Colors.white70),
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    top: 5.0),
-                                                child: Column(
-                                                  children: <Widget>[
-                                                    Text(
-                                                      "${snapshot.data.countries[index].totalConfirmed}",
                                                       style: TextStyle(
                                                           color:
                                                               Colors.white70),

@@ -4,9 +4,11 @@ import 'package:covid/pages/all.dart';
 import 'package:covid/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:flutter/scheduler.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-void main() => runApp(MaterialApp(home: MyApp()));
+void main() => runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: MyApp()));
 
 class MyApp extends StatefulWidget {
   @override
@@ -60,10 +62,10 @@ class _MyAppState extends State<MyApp> {
           index: pageIndex,
           height: 60.0,
           items: <Widget>[
-            Icon(Icons.find_in_page, size: 30, color: Colors.white,),
-            Icon(Icons.list, size: 30, color: Colors.white,),
-            Icon(Icons.compare_arrows, size: 30, color: Colors.white,),
-            Icon(Icons.view_list, size: 30, color: Colors.white,),
+            Icon(MdiIcons.home, size: 30, color: Colors.white,),
+            Icon(MdiIcons.viewList, size: 30, color: Colors.white,),
+            Icon(MdiIcons.allInclusive, size: 30, color: Colors.white,),
+            Icon(MdiIcons.expandAll, size: 30, color: Colors.white,),
           ],
           color: Color(0xff455a64),
           buttonBackgroundColor: Color(0xff455a64),

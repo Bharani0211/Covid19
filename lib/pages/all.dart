@@ -1,6 +1,7 @@
 import 'package:covid/ModelClasses/CovidModel.dart';
 import 'package:covid/network/network.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:getflutter/components/loader/gf_loader.dart';
 import 'package:getflutter/types/gf_loader_type.dart';
 
@@ -21,6 +22,9 @@ class _AllPagesState extends State<AllPages> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
     return Scaffold(
         backgroundColor: Color(0xff000000),
         body: Container(
